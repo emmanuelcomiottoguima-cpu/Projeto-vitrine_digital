@@ -1,0 +1,17 @@
+{% extends "base.html" %}{% block conteudo %}<span class="etiqueta">DA NOSSA FAMÍLIA PARA A SUA</span>
+<h1>Do campo para sua mesa.</h1>
+<p>Laticínios artesanais, qualidade e tradição.</p>
+<h2>Nossos produtos</h2>
+<div id="catalogo" class="lista-produtos"></div>
+<dialog id="pedido">
+    <h2>Fazer pedido</h2>
+    <p id="produto-escolhido"></p>
+    <form id="form-pedido"><input name="produto_id" type="hidden"><label>Quantidade<input name="quantidade"
+                type="number" min="1" step="1" value="1" required></label><label>Nome<input name="cliente"
+                maxlength="100" required></label><label>Telefone<input name="telefone" type="tel" minlength="8"
+                maxlength="30" required></label>
+        <p id="total"></p>
+        <p id="erro-pedido" role="alert"></p><button>Confirmar pedido</button><button type="button"
+            id="fechar">Cancelar</button>
+    </form>
+</dialog>{% endblock %}
