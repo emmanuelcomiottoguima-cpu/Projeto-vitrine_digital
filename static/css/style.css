@@ -1,0 +1,438 @@
+/* Cores reutilizáveis: altere aqui para mudar a identidade do site. */
+:root {
+    --creme: #fff8ed;
+    --laranja: #f4b184;
+    --marrom: #493124;
+    --suave: #796455;
+}
+
+/* border-box inclui borda e padding no tamanho dos elementos. */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 24px;
+}
+
+body {
+    margin: 0;
+    background: var(--creme);
+    color: var(--marrom);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+.botao {
+    font: inherit;
+    cursor: pointer;
+    background: var(--laranja);
+    border: 0;
+    border-radius: 12px;
+    padding: 12px 20px;
+    color: var(--marrom);
+    font-weight: bold;
+    display: inline-block;
+}
+
+button:hover,
+.botao:hover {
+    background: #eca16c;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #875033;
+    outline-offset: 5px;
+}
+
+.cabecalho {
+    max-width: 1180px;
+    margin: auto;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.marca {
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+}
+
+.marca span {
+    color: #c36e36;
+    padding-left: 3px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    font-size: 14px;
+}
+
+.botao-secundario {
+    background: transparent;
+    border: 1px solid #d8bfaa;
+}
+
+.apresentacao {
+    max-width: 1180px;
+    margin: auto;
+    padding: 65px 30px 80px;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.etiqueta {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #965126;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(46px, 6vw, 78px);
+    line-height: 1.08;
+    letter-spacing: -3px;
+    margin: 23px 0;
+}
+
+h1 em {
+    font-style: normal;
+    color: #b96b3b;
+}
+
+.apresentacao p {
+    max-width: 420px;
+    color: var(--suave);
+}
+
+.apresentacao .botao {
+    margin-top: 14px;
+}
+
+.detalhe {
+    font-size: 12px;
+    margin-top: 24px;
+}
+
+.destaque {
+    background: #f8dfc4;
+    padding: 30px;
+    border-radius: 48% 48% 24px 24px;
+    text-align: center;
+    transform: rotate(3deg);
+}
+
+.destaque img {
+    width: 100%;
+    display: block;
+    border-radius: 40%;
+}
+
+.destaque span {
+    display: block;
+    font-family: Georgia, serif;
+    font-size: 25px;
+    line-height: 1.25;
+    padding: 16px;
+}
+
+.secao {
+    max-width: 1180px;
+    margin: auto;
+    padding: 45px 30px 80px;
+}
+
+h2 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    line-height: 1.2;
+    margin: 12px 0;
+}
+
+.secao>p {
+    color: var(--suave);
+    margin-bottom: 30px;
+}
+
+/* Grid distribui os três cards em colunas iguais. */
+.lista-produtos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.produto {
+    background: #fffdf9;
+    border: 1px solid #edddcc;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.produto img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.conteudo {
+    padding: 23px;
+}
+
+.conteudo small {
+    color: var(--suave);
+}
+
+h3 {
+    font-size: 19px;
+    margin: 8px 0;
+}
+
+.conteudo p {
+    color: var(--suave);
+    font-size: 14px;
+    min-height: 48px;
+}
+
+.compra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.compra strong {
+    font-size: 21px;
+}
+
+.compra button {
+    padding: 10px 16px;
+    font-size: 14px;
+}
+
+.sobre {
+    max-width: 1120px;
+    margin: 0 auto 70px;
+    background: #f7e6d4;
+    border-radius: 24px;
+    padding: 45px;
+}
+
+.sobre p {
+    max-width: 730px;
+    color: var(--suave);
+}
+
+footer {
+    text-align: center;
+    border-top: 1px solid #edddcc;
+    padding: 35px 20px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+footer small {
+    color: var(--suave);
+}
+
+dialog {
+    border: 1px solid #edddcc;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 460px;
+    width: calc(100% - 40px);
+    color: var(--marrom);
+    background: var(--creme);
+}
+
+dialog h2 {
+    font-size: 28px;
+}
+
+dialog::backdrop {
+    background: #49312470;
+}
+
+/* Em telas pequenas, as colunas viram uma única coluna. */
+@media (max-width: 800px) {
+    .cabecalho {
+        flex-direction: column;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .apresentacao {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-top: 35px;
+    }
+
+    .destaque {
+        max-width: 380px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .lista-produtos {
+        grid-template-columns: 1fr;
+    }
+
+    .produto img {
+        height: 260px;
+        object-fit: contain;
+        background: #f9ead8;
+    }
+
+    .sobre {
+        margin: 0 20px 45px;
+        padding: 28px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+label {
+    display: block;
+    margin: 14px 0;
+    font-weight: bold
+}
+
+input,
+textarea,
+select {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    padding: 12px;
+    border: 1px solid #cbb49e;
+    border-radius: 8px;
+    background: #fffdf9;
+    color: #493124;
+    font: inherit
+}
+
+textarea {
+    min-height: 90px
+}
+
+.caixa {
+    padding: 24px;
+    background: #fffdf9;
+    border: 1px solid #edddcc;
+    border-radius: 16px;
+    margin: 16px 0
+}
+
+.indicadores {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px
+}
+
+.graficos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px
+}
+
+.linha-grafico {
+    display: grid;
+    grid-template-columns: 110px 1fr 35px;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    margin: 8px 0
+}
+
+.trilho {
+    height: 16px;
+    background: #f9ead8;
+    border-radius: 5px
+}
+
+.barra {
+    height: 100%;
+    background: #e99359;
+    border-radius: 5px
+}
+
+.tabela {
+    overflow: auto
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #edddcc
+}
+
+section {
+    margin: 35px 0
+}
+
+#lista-admin {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px
+}
+
+button:disabled {
+    opacity: .5;
+    cursor: not-allowed
+}
+
+#mensagem,
+#erro-pedido,
+#erro-produto {
+    font-weight: bold
+}
+
+.abas {
+    flex-wrap: wrap
+}
+
+@media(max-width:800px) {
+
+    .indicadores,
+    .graficos,
+    #lista-admin {
+        grid-template-columns: 1fr
+    }
+
+    .linha-grafico {
+        grid-template-columns: 95px 1fr 30px
+    }
+}
