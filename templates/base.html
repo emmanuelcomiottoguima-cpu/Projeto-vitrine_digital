@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>LatMais</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <script src="{{ url_for('static',filename='app.js') }}" defer></script>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <a class="marca" href="/">LatMais<span>+</span></a>
+        <nav><a href="/">Loja</a>
+            <a href="/admin">Administração</a>
+        </nav>
+    </header>
+    <main class="secao">{% block conteudo %}{% endblock %}<p id="mensagem" role="status" aria-live="polite"></p>
+    </main>
+    <footer>LatMais · Projeto escolar · Pedidos sem pagamento online</footer>
+</body>
+
+</html>
