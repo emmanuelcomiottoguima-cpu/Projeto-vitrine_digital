@@ -1,43 +1,43 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>LatMais</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LatMais: laticínios artesanais de uma empresa familiar.">
+    <title>LatMais | Do campo para sua mesa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
-
 <body>
-
-    <header>
-        <h1>LatMais</h1>
-
-        <nav>
-            <a href="#inicio">Início</a>
-            <a href="#produtos">Produtos</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#">Administração</a>
+    <header class="cabecalho">
+        <a class="marca" href="#inicio" aria-label="LatMais início">LatMais<span>+</span></a>
+        <nav aria-label="Menu principal">
+            <a href="#inicio">Início</a><a href="#produtos">Produtos</a><a href="#sobre">Sobre</a>
+            <button class="botao-secundario" type="button" id="admin">Administração</button>
         </nav>
     </header>
-
     <main>
-
-        <section id="inicio">
-            <h2>Do campo para sua mesa.</h2>
-
-            <p>
-                Qualidade e tradição em cada produto.
-            </p>
-
-            <a href="#produtos">Conheça nossos produtos</a>
+        <section id="inicio" class="apresentacao">
+            <div><span class="etiqueta">DA NOSSA FAMÍLIA PARA A SUA</span>
+                <h1>Do campo<br>para sua <em>mesa.</em></h1>
+                <p>Os pequenos prazeres começam com bons ingredientes. Conheça os laticínios artesanais da LatMais.</p>
+                <a class="botao" href="#produtos">Conheça nossos produtos →</a>
+                <p class="detalhe">Tradição familiar · Cuidado em cada detalhe</p>
+            </div>
+            <div class="destaque"><img src="imagens/queijo.svg" alt="Ilustração do queijo colonial LatMais"><span>Mais sabor.<br>Mais momentos juntos.</span></div>
         </section>
-
+        <section id="produtos" class="secao">
+            <span class="etiqueta">SIMPLES, COMO DEVE SER</span>
+            <h2>Nossos produtos</h2>
+            <p>Três formas de levar um pouco do campo para casa.</p>
+            <div class="lista-produtos"><article class="produto"><img src="imagens/leite.svg" alt="Ilustração de Leite Integral Artesanal" width="320" height="280"><div class="conteudo"><small>1 litro</small><h3>Leite Integral Artesanal</h3><p>Fresco e cheio de sabor para acompanhar seu dia.</p><div class="compra"><strong>R$ 7,90</strong><button type="button" data-produto="Leite Integral Artesanal">Comprar</button></div></div></article><article class="produto"><img src="imagens/queijo.svg" alt="Ilustração de Queijo Colonial" width="320" height="280"><div class="conteudo"><small>500 gramas</small><h3>Queijo Colonial</h3><p>Sabor marcante e textura que lembra a mesa da família.</p><div class="compra"><strong>R$ 34,90</strong><button type="button" data-produto="Queijo Colonial">Comprar</button></div></div></article><article class="produto"><img src="imagens/manteiga.svg" alt="Ilustração de Manteiga Artesanal" width="320" height="280"><div class="conteudo"><small>200 gramas</small><h3>Manteiga Artesanal</h3><p>Cremosa, delicada e perfeita para o pão quentinho.</p><div class="compra"><strong>R$ 16,90</strong><button type="button" data-produto="Manteiga Artesanal">Comprar</button></div></div></article></div>
+        </section>
+        <section id="sobre" class="sobre">
+            <span class="etiqueta">QUEM SOMOS</span><h2>Uma família.<br>Muito carinho à mesa.</h2>
+            <p>A LatMais é uma empresa familiar fictícia de laticínios artesanais, criada para este projeto escolar. Nossa proposta une tradição, qualidade e uma forma mais simples de conectar a empresa aos seus clientes.</p>
+        </section>
     </main>
-
+    <footer><a class="marca" href="#inicio">LatMais<span>+</span></a><p>Do campo para sua mesa.</p><small>Projeto escolar · Versão inicial do frontend</small></footer>
+    <dialog id="aviso"><h2 id="aviso-titulo">Em construção</h2><p id="aviso-texto"></p><form method="dialog"><button>Entendi</button></form></dialog>
 </body>
 </html>
