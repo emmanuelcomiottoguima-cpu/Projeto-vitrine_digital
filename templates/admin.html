@@ -1,0 +1,68 @@
+{% extends "base.html" %}{% block conteudo %}
+<h1>Administração</h1>
+<p>Visualize as vendas e gerencie os três produtos da LatMais.</p>
+<nav class="abas">
+    <a href="#painel">Dashboard</a>
+    <a href="#produtos-admin">Produtos</a>
+    <a href="#vendas">Vendas</a>
+</nav>
+<section id="painel">
+    <h2>Como está a empresa?</h2>
+    <label>Período<select id="periodo">
+            <option value="1">Diário · Hoje</option>
+            <option value="7" selected>Semanal · 7 dias</option>
+            <option value="30">Mensal · 30 dias</option>
+        </select>
+    </label>
+    <div id="indicadores" class="indicadores"></div>
+    <div class="graficos">
+        <article class="caixa">
+            <h3>Volume de vendas (unidades por dia)</h3>
+            <div id="serie"></div>
+        </article>
+        <article class="caixa">
+            <h3>Unidades vendidas por produto</h3>
+            <div id="comparacao"></div>
+        </article>
+    </div>
+</section>
+<section id="produtos-admin">
+    <h2>Gerenciar produtos</h2>
+    <p>Cadastre leite, queijo e manteiga. As imagens são ilustrações locais.</p>
+    <div id="lista-admin"></div>
+    <form id="form-produto" class="caixa">
+        <input name="id" type="hidden">
+        <label>Nome<input name="nome" maxlength="100" required></label>
+        <label>Descrição<textarea name="descricao" maxlength="1000" required></textarea>
+        </label>
+        <label>Custo de produção (R$)<input name="custo" type="number" min="0" step="0.01" required>
+        </label>
+        <label>Preço de venda (R$)<input name="preco" type="number" min="0.01" step="0.01" required>
+        </label><label>Estoque<input name="estoque" type="number" min="0" step="1" required></label>
+        <label>Imagem<select name="imagem">
+                <option value="leite.svg">Leite</option>
+                <option value="queijo.svg">Queijo</option>
+                <option value="manteiga.svg">Manteiga</option>
+            </select></label><button>Salvar produto</button><button type="button" id="novo">Limpar / novo
+            produto</button>
+        <p id="erro-produto" role="alert"></p>
+    </form>
+</section>
+<section id="vendas">
+    <h2>Vendas do período</h2>
+    <div class="tabela">
+        <table>
+            <thead>
+                <tr>
+                    <th>Pedido</th>
+                    <th>Data</th>
+                    <th>Cliente</th>
+                    <th>Produto</th>
+                    <th>Qtd.</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="historico"></tbody>
+        </table>
+    </div>
+</section>{% endblock %}
